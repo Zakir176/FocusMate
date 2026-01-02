@@ -1,24 +1,31 @@
-﻿namespace FocusMate
+﻿//using Android.Widget;
+
+namespace FocusMate;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    private bool isCompleted = false;
+
+    public MainPage()
     {
-        int count = 0;
+        InitializeComponent();
+    }
 
-        public MainPage()
+    private void OnToggleClicked(object sender, EventArgs e)
+    {
+        isCompleted = !isCompleted;
+
+        if (isCompleted)
         {
-            InitializeComponent();
+            StatusLabel.Text = "Status: Completed";
+            StatusLabel.TextColor = Colors.Green;
+            ToggleButton.Text = "Mark as Pending";
         }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
+        else
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            StatusLabel.Text = "Status: Pending";
+            StatusLabel.TextColor = Colors.Red;
+            ToggleButton.Text = "Mark as Completed";
         }
     }
 }
