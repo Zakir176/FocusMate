@@ -19,13 +19,13 @@ public partial class MainPage : ContentPage
         {
             StatusLabel.Text = "Status: Completed";
             StatusLabel.TextColor = Colors.Green;
-            ToggleButton.Text = "Mark as Pending";
+            ToggleButton.Text = "⏪ Mark as Pending";
         }
         else
         {
             StatusLabel.Text = "Status: Pending";
             StatusLabel.TextColor = Colors.Red;
-            ToggleButton.Text = "Mark as Completed";
+            ToggleButton.Text = "✅ Mark as Completed";
         }
     }
 }
