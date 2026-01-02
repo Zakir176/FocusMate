@@ -8,30 +8,39 @@
         Padding="30"
         VerticalOptions="Center">
 
-        <Label
-            Text="Today's Task"
-            FontSize="18"
-            TextColor="#6B7280"
-            HorizontalOptions="Center" />
+        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+            <Label Text="📝" FontSize="20" />
+            <Label
+                Text="Today's Task"
+                FontSize="18"
+                TextColor="#6B7280"
+                HorizontalOptions="Center" />
+        </HorizontalStackLayout>
 
-        <Label
-            x:Name="TaskLabel"
-            Text="Prepare slides for .NET Conf"
-            FontSize="26"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            TextColor="#111827" />
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Label Text="🎯" FontSize="26" />
+            <Label
+                x:Name="TaskLabel"
+                Text="Prepare slides for .NET Conf"
+                FontSize="26"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#111827" />
+        </HorizontalStackLayout>
 
-        <Label
-            x:Name="StatusLabel"
-            Text="Status: Pending"
-            FontSize="16"
-            HorizontalOptions="Center"
-            TextColor="#DC2626" />
+        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+            <Label Text="📌" FontSize="16" />
+            <Label
+                x:Name="StatusLabel"
+                Text="Status: Pending"
+                FontSize="16"
+                HorizontalOptions="Center"
+                TextColor="#DC2626" />
+        </HorizontalStackLayout>
 
         <Button
             x:Name="ToggleButton"
-            Text="Mark as Completed"
+            Text="✅ Mark as Completed"
             FontSize="16"
             CornerRadius="12"
             HeightRequest="50"
